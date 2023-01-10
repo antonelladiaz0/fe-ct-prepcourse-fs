@@ -40,7 +40,7 @@ function agregarItemAlComienzoDelArray(array, elemento) {
    // Agrega el "elemento" al comienzo del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
-   array[array.unshift(elemento)]
+   array.unshift(elemento)
    return array;
 }
 
@@ -152,6 +152,7 @@ function diaDeLaSemana(numeroDeDia) {
    }
 }
 
+
 function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar True si el entero inicia con 9 y False en otro caso.
@@ -232,7 +233,7 @@ function breakStatement(num) {
    // Tu código:
    let array = []
    let suma = num
-   for (var i = 1; i <= 10; i++) {
+   for (var i = 0; i <= 9; i++) {
       suma = suma + 2;
       if (suma === i) {
          break
