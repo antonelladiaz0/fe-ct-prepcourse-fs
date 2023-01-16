@@ -22,10 +22,10 @@ function nuevoUsuario(nombre, email, password) {
    // Este debe tener las propiedades: "nombre", "email" y "password" con sus respectivos valores.
    // Retornar el objeto.
    // Tu código:
-   var objeto = {
-      nombre: nombre,
+ var objeto = {
+    nombre: nombre,
       email: email,
-      password: password
+    password: password
    }
    return objeto;
 }
@@ -123,10 +123,14 @@ function pasarUsuarioAPremium(objetoMuchosUsuarios) {
    // Define esta propiedad de todos los usuarios como True.
    // Retornar el arreglo.
    // Tu código:
-   objetoMuchosUsuarios.forEach((usuarios) => {
-      usuarios.esPremium = true;
-   });
-   return objetoMuchosUsuarios
+   // objetoMuchosUsuarios.forEach((usuarios) => {
+   //    usuarios.esPremium = true;
+   // });
+   // return objetoMuchosUsuarios
+objetoMuchosUsuarios.forEach((usuarios) => {
+   usuarios.esPremium = true;
+})
+return objetoMuchosUsuarios;
 }
 
 function sumarLikesDeUsuario(objetoUsuario) {
@@ -153,7 +157,7 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
    // PorcentajeDeDescuento ---> 0.2
    // Precio final ---> 8
    // Tu código:
-   objetoProducto.calcularPrecioDescuento =function(){
+    objetoProducto.calcularPrecioDescuento =function(){
       return this.precio - (this.precio * this.porcentajeDeDescuento)
    }
   return objetoProducto;
